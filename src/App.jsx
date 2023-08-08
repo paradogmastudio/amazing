@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/home' element={<HomeScreen/>}/>
+        <Route path='/' element={<HomeScreen/>}/>
         <Route path='/catalogue' element={<CatalogueScreen/>}/>
         <Route path='/panier' element={<BasketScreen/>}/>
         <Route path='/user' element={<UserScreen/>}/>
