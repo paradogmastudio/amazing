@@ -4,12 +4,14 @@ import HomeScreen from './screens/HomeScreen'
 import CatalogueScreen from './screens/CatalogueScreen'
 import BasketScreen from './screens/BasketScreen'
 import UserScreen from './screens/UserScreen'
+import Navbar from './components/Navbar'
 
 function App() {
  
 
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/catalogue' element={<CatalogueScreen/>}/>
