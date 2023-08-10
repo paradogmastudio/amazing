@@ -1,8 +1,25 @@
 import React from 'react'
+import BasketCard from '../components/BasketCard'
 
-function BasketScreen() {
+function BasketScreen({basket}) {
+  
+  const displayBasket = basket.map(
+    element=>{
+      return(
+        <BasketCard
+          title={element.title}
+          image={element.image}
+          price={element.price}
+        />
+
+      )
+
+    }
+
+  )
+
   return (
-    <div>BasketScreen</div>
+    <main id="basketScreenMain">{displayBasket}</main>
   )
 }
 

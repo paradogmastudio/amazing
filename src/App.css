@@ -1,13 +1,12 @@
 body{
   display: flex;
   flex-direction: column;
-
+  
 }
 
 #barreNavigation{
-  width: 100vw;
-  height: 10vh;
-  background-color: black
+  width:100vw;
+  
 }
 
 #barreNavigation ul{
@@ -15,8 +14,14 @@ body{
   flex-direction: row;
   list-style-type : none;
   justify-content: space-around;
-
+  align-items: center;
+  margin-top: 0;
+  height: 10vh;
+  background-color: black;
+  text-align:center;
+  
 }
+
 
 #userScreenMain{
   display: flex;
@@ -27,24 +32,86 @@ body{
 
 }
 
-#userScreenSectionLeft{
+.userScreenSection{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  gap: 5px;
   width: 48%;
-  height: 100%;
-  background-color: darkviolet;
+  height: 20%;
+  background-color: rgb(223, 181, 241);
   border: 1px solid black
 
 }
 
-#userScreenSectionRight{
+.userScreenSection button{
+  width: 16%;
+  margin-left: 42%;
+
+
+}
+
+#catalogueScreenMain, #basketScreenMain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+
+#catalogueCard{
   display: flex;
   flex-direction: column;
-  width: 48%;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 30vh;
+  border: 2px solid black;
+}
+
+
+
+#catalogueCard div{
+  width: 100%;
+  
+}
+
+#cardTitle{
+  height:40%;
+  background-color: rgb(223, 181, 241);
+  border-bottom: 1px solid black;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cardPrice{
+  height:10%;
+  background-color: rgb(223, 181, 241);
+  border-top: 1px solid black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#cardButton{
+  font-weight: bold;
   height: 100%;
-  background-color: darkviolet;
-  border: 1px solid black
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(187, 69, 238);
+}
 
+#cardImage{
+  height: 50%;
+}
 
-
+#cardImage img{
+  height:100%;
+  width: 60%;
+  margin-left: 20%;
 }

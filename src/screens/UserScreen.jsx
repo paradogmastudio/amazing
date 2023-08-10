@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 function UserScreen() {
   const [name, setName]=useState("")
   const [firstName, setFirstName]=useState(name)
@@ -15,24 +16,27 @@ function UserScreen() {
 
   return (
     <main id="userScreenMain">
-      <section id="userScreenSectionLeft">
+      
+      <section className="userScreenSection">
         <div>Nom: {firstName}</div>
         <div>e-mail: {myMail}</div>
       </section>
-      <section id="userScreenSectionRight">
-      <div>Your adress: 
-        <input onChange={element=>setName(element.target.value)}
-          value={name}
-        />
+     
+      <section className="userScreenSection">
         
-
-      </div>
-        <div>Your e-mail: 
-        <input onChange={element=>setMail(element.target.value)}
-          value={mail}
-        />
+        <div>Your name: 
+          <input onChange={element=>setName(element.target.value)}
+          value={name}
+           />
         </div>
-<button onClick={()=>validation()}>ok</button>
+        
+        <div>Your e-mail: 
+          <input onChange={element=>setMail(element.target.value)}
+          value={mail}
+          />
+        </div>
+
+        <button onClick={()=>validation()}>ok</button>
       </section>
       
 

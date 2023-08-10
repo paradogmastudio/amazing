@@ -1,8 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import CatalogueCard from '../components/CatalogueCard'
 
-function CatalogueScreen() {
+
+function CatalogueScreen({ addBasket }) {
+  const [articles, setArticles]=useState([])
+
+  useEffect(()=>{
+    async function loadData (){
+        const response =  await fetch('https://fakestoreapi.com/products')
+        const jsonresponse = await response.json()
+        setArticles(jsonresponse)
+      
+    }
+    loadData()
+
+  },[])
+
+
+
+
+const display = articles.map((element)=>{
+  return(
+  <CatalogueCard
+        title={element.title}
+        price={element.price}
+        image={element.image}
+        addBasket={addBasket}
+  />
+)
+})
+ 
   return (
-    <div>CatalogueScreen</div>
+    <main id="catalogueScreenMain">{display}</main>
   )
 }
 
