@@ -26,13 +26,8 @@ function App() {
         <Route path='/catalogue' element={<CatalogueScreen addBasket={addBasket}/>}/>
         <Route path='/panier' element={<BasketScreen basket={basket}/>}/>
         <Route path='/user' element={<UserScreen/>}/>
-
-
-
       </Routes>
     </Router>
-      
-    
   )
 }
 
