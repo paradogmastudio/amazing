@@ -96,6 +96,15 @@ body{
   justify-content: space-between;
 }
 
+#cardPrice2{
+  height:10%;
+  background-color: rgb(187, 69, 238);
+  border-top: 1px solid black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 #cardButton{
   font-weight: bold;
@@ -106,6 +115,8 @@ body{
   background-color: rgb(187, 69, 238);
 }
 
+
+
 #cardImage{
   height: 50%;
 }
@@ -114,4 +125,48 @@ body{
   height:100%;
   width: 60%;
   margin-left: 20%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.grid-item{
+  background-color: rgb(223, 181, 241);
+  border: 2px solid black;
+
+  
+}
+
+.grid-item h5{
+  text-align: center;
+}
+
+.grid-item h6{
+  margin-left: 5%;
+}
+
+main h1{
+  text-align: center;
+}
+
+main h3{
+  margin-left: 50px;
+}
+
+li button{
+  background-color: rgb(187, 69, 238);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px
 }

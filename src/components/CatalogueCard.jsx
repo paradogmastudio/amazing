@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function CatalogueCard({title, price, image, addBasket}) {
+    const [buttonStyle, setButtonStyle] =useState("cardPrice")
 
     const addToBasket = () => {
         const article = {
@@ -10,6 +11,7 @@ function CatalogueCard({title, price, image, addBasket}) {
           price: price
         };
         addBasket(article);
+        setButtonStyle("cardPrice2")
       };
   return (
     <div id="catalogueCard">
@@ -19,7 +21,7 @@ function CatalogueCard({title, price, image, addBasket}) {
         <div id="cardImage">
             <img src={image} alt={title}/>
         </div>
-        <div id="cardPrice">
+        <div id={buttonStyle}>
             <div>{price}€</div>
             <button id="cardButton" onClick={addToBasket}>Panier</button>
             

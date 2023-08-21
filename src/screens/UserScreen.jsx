@@ -23,13 +23,14 @@ function UserScreen() {
       </section>
      
       <section className="userScreenSection">
-        
+
         <div>Your name: 
           <input onChange={element=>setName(element.target.value)}
           value={name}
            />
         </div>
         
+
         <div>Your e-mail: 
           <input onChange={element=>setMail(element.target.value)}
           value={mail}
@@ -37,6 +38,8 @@ function UserScreen() {
         </div>
 
         <button onClick={()=>validation()}>ok</button>
+
+
       </section>
       
 
